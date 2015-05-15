@@ -4,10 +4,13 @@
 	<title>bloodor</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link rel="stylesheet" href="../styles/normalize.css">
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="../styles/foundation.css">
 	<link rel="stylesheet" href="../styles/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script src="../scripts/foundation.min.js"></script>
 	<script src="../scripts/modernizr.js"></script>
 	<script src="../scripts/flowtype.js"></script>
@@ -59,117 +62,119 @@
 		</div>
 		<div class="row">
 			<div id="bg-solicitar" class="large-10 large-centered columns">
-				<div class="row">
-					<div class="small-3 large-3 columns">
-						<p class="p-form-solicitud">Tipo de sangre:</p>
-						
+				<!--<form action="POST" href="registrarSolicitud.php" name="form-solicitar" onsubmit="enviarSolicitud()">-->
+					<div class="row">
+						<div class="small-3 large-3 columns">
+							<p class="p-form-solicitud">Tipo de sangre:</p>
+							
+						</div>
+	                    <div class="small-9 large-9 columns">
+	                        <ul class="small-block-grid-2 large-block-grid-4">
+	                            <li>
+	                                <div class="grid-sangre">
+	                                    <div class="sel-form-sangre active">
+	                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
+	                                    </div>
+	                                    <p>Todas</p>
+	                                </div>
+	                            </li>
+	                            <li>
+	                                <div class="grid-sangre">
+	                                	<div class="sel-form-sangre ">
+	                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
+	                                    </div>
+	                                    <p>A +</p>
+	                                </div>
+	                            </li>
+	                            <li>
+	                                <div class="grid-sangre">
+	                                	<div class="sel-form-sangre">
+	                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
+	                                    </div>
+	                                    <p>A -</p>
+	                                </div>
+	                            </li>
+	                            <li>
+	                                <div class="grid-sangre">
+	                                	<div class="sel-form-sangre">
+	                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
+	                                    </div>
+	                                    <p>B +</p>
+	                                </div>
+	                            </li>
+	                            <li>
+	                                <div class="grid-sangre">
+	                                	<div class="sel-form-sangre">
+	                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
+	                                    </div>
+	                                    <p>B -</p>
+	                                </div>
+	                            </li>
+	                            <li>
+	                                <div class="grid-sangre">
+	                                	<div class="sel-form-sangre">
+	                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
+	                                    </div>
+	                                    <p>AB +</p>
+	                                </div>
+	                            </li>
+	                            <li>
+	                                <div class="grid-sangre">
+	                                	<div class="sel-form-sangre">
+	                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
+	                                    </div>
+	                                    <p>AB -</p>
+	                                </div>
+	                            </li>
+	                            <li>
+	                                <div class="grid-sangre">
+	                                	<div class="sel-form-sangre">
+	                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
+	                                    </div>
+	                                    <p>O +</p>
+	                                </div>
+	                            </li>
+	                            <li>
+	                                <div class="grid-sangre">
+	                                	<div class="sel-form-sangre">
+	                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
+	                                    </div>
+	                                    <p>O -</p>
+	                                </div>
+	                            </li>
+	                        </ul>
+	                    </div>
 					</div>
-                    <div class="small-9 large-9 columns">
-                        <ul class="small-block-grid-2 large-block-grid-4">
-                            <li>
-                                <div class="grid-sangre">
-                                    <div class="sel-form-sangre">
-                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
-                                    </div>
-                                    <p>Todas</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="grid-sangre">
-                                	<div class="sel-form-sangre active">
-                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
-                                    </div>
-                                    <p>A +</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="grid-sangre">
-                                	<div class="sel-form-sangre">
-                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
-                                    </div>
-                                    <p>A -</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="grid-sangre">
-                                	<div class="sel-form-sangre">
-                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
-                                    </div>
-                                    <p>B +</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="grid-sangre">
-                                	<div class="sel-form-sangre">
-                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
-                                    </div>
-                                    <p>B -</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="grid-sangre">
-                                	<div class="sel-form-sangre">
-                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
-                                    </div>
-                                    <p>AB +</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="grid-sangre">
-                                	<div class="sel-form-sangre">
-                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
-                                    </div>
-                                    <p>AB -</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="grid-sangre">
-                                	<div class="sel-form-sangre">
-                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
-                                    </div>
-                                    <p>O +</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="grid-sangre">
-                                	<div class="sel-form-sangre">
-                                        <img src="../rsc/img/iconmonstr-check-mark-6-icon-24.png" alt="flecha">
-                                    </div>
-                                    <p>O -</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-				</div>
-				<div class="row">
-					<div class="small-12 large-3 columns">
-						<p class="p-form-solicitud">Nombre</p>
+					<div class="row">
+						<div class="small-12 large-3 columns">
+							<p class="p-form-solicitud">Nombre</p>
+						</div>
+						<div class="small-12 large-9 columns"><input type="text" name="nombreSol" id="nombreSol"></div>
 					</div>
-					<div class="small-12 large-9 columns"><input type="text"></div>
-				</div>
-				<div class="row">
-					<div class="small-12 large-3 columns">
-						<p class="p-form-solicitud">No. Donadores</p>
+					<div class="row">
+						<div class="small-12 large-3 columns">
+							<p class="p-form-solicitud">No. Donadores</p>
+						</div>
+						<div class="small-12 large-9 columns"><input id="input-donadores" type="text" name="donadoresSol"></div>
 					</div>
-					<div class="small-12 large-9 columns"><input id="input-donadores" type="text"></div>
-				</div>
-				<div class="row">
-					<div class="small-12 large-3 columns">
-						<p class="p-form-solicitud">Acudir a</p>
+					<div class="row">
+						<div class="small-12 large-3 columns">
+							<p class="p-form-solicitud">Acudir a</p>
+						</div>
+						<div class="small-12 large-9 columns"><input type="text" name="acudirSol" id="acudirSol"></div>
 					</div>
-					<div class="small-12 large-9 columns"><input type="text"></div>
-				</div>
-				<div class="row">
-					<div class="small-12 large-3 columns">
-						<p class="p-form-solicitud">Contacto</p>
+					<div class="row">
+						<div class="small-12 large-3 columns">
+							<p class="p-form-solicitud">Contacto</p>
+						</div>
+						<div class="small-12 large-9 columns"><input type="text" name="contactoSol" id="contactoSol"></div>
 					</div>
-					<div class="small-12 large-9 columns"><input type="text"></div>
-				</div>
-				<div class="row">
-					<div class="small-7 medium-3 large-2 small-centered medium-centered large-centered columns">
-						<a href="" id="btn-form-solicitar" class="button radius">Enviar solicitud</a>
+					<div class="row">
+						<div class="small-7 medium-3 large-2 small-centered medium-centered large-centered columns">
+							<a href="javascript:enviarSolicitud();" id="btn-form-solicitar" class="button radius">Enviar solicitud</a>
+						</div>
 					</div>
-				</div>
+				<!--</form>-->
 			</div>
 		</div>
 	</section>
@@ -186,13 +191,25 @@
 		                <div class="small-12 large-3 columns">
 		                    <p class="p-form-registro">Nombre Completo</p>
 		                </div>
-		                <div class="small-12 large-9 columns"><input type="text" class="input-registro"></div>
+		                <div class="small-12 large-9 columns"><input type="text" class="input-registro" name="nombreRegistro" id="nombreRegistro"></div>
 		            </div>
 		            <div class="row">
 		                <div class="small-12 large-3 columns">
 		                    <p class="p-form-registro">Tipo de Sangre</p>
 		                </div>
-		                <div class="small-12 large-9 columns"><input type="text" class="input-registro"></div>
+		                <div class="small-12 large-9 columns">
+		               	<select name="reg-tipo-sangre" id="reg-tipo-sangre">
+		               		<option value="Todas">Todas</option>
+		               		<option value="A+">A+</option>
+		               		<option value="A-">A-</option>
+		               		<option value="B+">B+</option>
+		               		<option value="B-">B-</option>
+		               		<option value="AB+">AB+</option>
+		               		<option value="AB-">AB-</option>
+		               		<option value="O+">O+</option>
+		               		<option value="O-">O-</option>
+		               	</select>
+		                </div>
 		            </div>
 		            <div class="row">
 		                <div class="small-12 large-3 columns">
@@ -209,23 +226,23 @@
 		                <div class="small-12 large-3 columns">
 		                    <p class="p-form-registro">Fecha última donación</p>
 		                </div>
-		                <div class="small-12 large-9 columns"><input type="text" class="input-registro"></div>
+		                <div class="small-12 large-9 columns"><input type="text" class="input-registro" id="datepicker"></div>
 		            </div>
 		            <div class="row">
 		                <div class="small-12 large-3 columns">
 		                    <p class="p-form-registro">Correo Electrónico</p>
 		                </div>
-		                <div class="small-12 large-9 columns"><input type="text" class="input-registro"></div>
+		                <div class="small-12 large-9 columns"><input type="text" class="input-registro" name="correoRegistro" id="correoRegistro"></div>
 		            </div>
 		            <div class="row">
 		                <div class="small-12 large-3 columns">
 		                    <p class="p-form-registro">Contraseña</p>
 		                </div>
-		                <div class="small-12 large-9 columns"><input type="password" class="input-registro"></div>
+		                <div class="small-12 large-9 columns"><input type="password" class="input-registro" name="passRegistro" id="passRegistro"></div>
 		            </div>
 		            <div class="row">
 					    <div class="small-7 medium-3 large-2 small-centered medium-centered large-centered columns">
-						    <a href="" id="btn-form-solicitar" class="button radius">Enviar solicitud</a>
+						    <a href="javascript:enviarRegistro();" id="btn-form-solicitar" class="button radius">Enviar solicitud</a>
 					</div>
 				</div>
 		    </div>
